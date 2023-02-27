@@ -59,10 +59,3 @@ class CommentRewiewPermission(permissions.BasePermission):
             or request.user.is_moderator
         )
 
-
-class AdminOrReadOnly(BasePermission):
-    def has_permission(self, request, view):
-        return (
-            request.method in permissions.SAFE_METHODS
-            or request.user.is_authenticated and request.user.is_admin
-        )

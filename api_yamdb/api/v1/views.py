@@ -1,6 +1,5 @@
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
-from rest_framework import viewsets
 from rest_framework.pagination import PageNumberPagination
 from .permissions import (CommentRewiewPermission)
 from .serializers import (ReviewSerializer, CommentSerializer)
@@ -33,7 +32,6 @@ from rest_framework import status, filters
 from rest_framework.permissions import IsAuthenticated
 from .permissions import AdminOrSuperUSerOnly
 from rest_framework.pagination import LimitOffsetPagination
-from django.shortcuts import get_object_or_404
 from django.conf import settings
 from rest_framework_simplejwt.tokens import AccessToken
 from django.utils.crypto import get_random_string
